@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <head>
+        <script src="Magento_Checkout::js/button_coupon.js" />
+    </head>
+
+    <body>
+        <referenceBlock name="logo" remove="true"  />
+        <referenceBlock name="cms_footer" remove="true" />
+        <referenceBlock name="call-us" remove="true" />
+        <referenceBlock name="stores-campaigns" remove="true" />
+
+        <referenceContainer name="after.body.start">
+            <block class="Magento\Cms\Block\Block" name="checkout-header" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">checkout_header</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Cms\Block\Block" name="checkout-footer" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">checkout_footer</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+        
+</page>
