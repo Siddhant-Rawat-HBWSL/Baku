@@ -1,0 +1,186 @@
+.column.main {
+    .product-upper {
+        display: flex;
+
+        .fotorama__nav.fotorama__nav--thumbs {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sub-categories {
+            border: 1px solid rgb(181, 181, 181);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            height: 250px;
+            overflow-y: scroll;
+            ::-webkit-scrollbar-thumb {
+                background: red; 
+                border-radius: 10px;
+            }
+
+            ul {
+                list-style: none;
+                padding-left: 0px;
+                margin-bottom: 0px;
+            }
+
+            li {
+                padding: 10px 20px;
+
+                &:not(:last-child) { 
+                    border-bottom: 1px solid rgb(205, 205, 205);
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .product.info.detailed {
+        .data.item.content {
+            border: 0px;
+        }
+
+        .data.item.title {
+            a {
+                background-color: white;
+                border: 0px;
+    
+                &:hover {
+                    border-bottom: 1px solid #EE0000;
+                }
+            }
+        }
+
+        .data.item.content {
+            border: 1px solid rgb(202, 202, 202);
+            border-radius: 10px;
+        }
+    }
+
+    .pdp-footer-imgs {
+        display: flex;
+        padding: 1rem 0rem;
+        justify-content: space-between;
+        border-top: 1px solid #D1D5DB;
+        border-bottom: 1px solid #D1D5DB;
+    }
+
+    .stock.available {
+        color: #5BB300;
+        font-weight: 400;
+    }
+
+    .stock.unavailable {
+        color: red;
+    }
+
+    .product-info-stock-sku {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-info-main {
+        .price {
+            color: #EE0000;
+            font-size: 35px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        .price-box.price-final_price {
+            border-bottom: 1px solid #D1D5DB;
+            padding: 10px;
+        }
+
+        .product-options-bottom {
+            .actions {
+                display: flex;
+                padding-top: 0px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+
+                .product-addto-links {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+
+                    a {
+                        background-color: white;
+                        border: none;
+
+                        &:hover {
+                            scale: 1.1;
+                        }
+                    }
+                }
+
+                button.action {
+                    background-color: #EE0000;
+                    padding: 15px 20px;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 10px;
+                    
+                    &:before {
+                        content: '';
+                        background: url('@{baseDir}images/cart.png');
+                        height: 15px;
+                        width: 15px;
+                        display: inline-block;
+                    }
+                    
+                    span {
+                        font-size: 14px;
+                        line-height: 24px;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+
+        .product-options-wrapper {
+            .swatch-attribute-label {
+                padding-right: 50px;
+            }
+
+            .swatch-attribute-selected-option {
+                display: none;
+            }
+        }
+    }
+}
+
+.box-tocart {
+    .fieldset {
+        display: flex;
+    
+        .field.qty {
+            .control {
+                border: 1px solid gray;
+                border-radius: 8px;
+                padding: 2px 4px;
+            
+                .subtract-qty, .add-qty {
+                    background-color: white;
+                    border: none;
+                    padding: 0px;
+    
+                    img {
+                        background-color: white;
+                    }
+                }
+            
+                .input-text.qty {
+                    border: white;
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
