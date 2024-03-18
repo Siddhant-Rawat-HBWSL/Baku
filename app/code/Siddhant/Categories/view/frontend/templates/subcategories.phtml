@@ -1,0 +1,17 @@
+<?php
+
+/** @var \Siddhant\Categories\Block\Subcategories $block */
+
+?>
+<h2>All Departments</h2>
+<div class="sub-categories">
+    <ul>
+        <?php foreach($block->getSubCategories() as $categoryName): ?>
+            <li>
+                <a href="<?php echo '/' . strtolower($categoryName) . '.html' ?>">
+                    <?= $categoryName ?>
+                </a>
+            </li>
+        <?php endforeach ?>
+    </ul>
+</div>
