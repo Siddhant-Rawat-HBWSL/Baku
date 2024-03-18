@@ -1,0 +1,194 @@
+.column.main {
+    .authentication-wrapper {
+        top: 65px;
+    }
+
+    #checkout.checkout-container {
+        ul.opc-progress-bar {
+            display: none;
+        }
+    }
+
+    #customer-email-fieldset {
+        .field.required {
+            display: none;
+        }
+
+        fieldset.fieldset {
+            display: none;
+        }
+    }
+
+    #shipping-new-address-form {
+        .field {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                text-align: left;
+            }
+        }
+
+        legend {
+            text-align: left;
+        }
+    }
+
+    .side {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border: 0.25px solid rgb(198, 197, 197);
+        border-radius: 10px 20px;
+
+        .amt {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 5px;
+
+            .amt-left {
+                font-weight: 300;
+            }
+
+            .amt-right {
+                font-weight: bolder;
+            }
+        }
+
+        .amt.tot {
+            padding: 15px 0px;
+            margin: 15px 0px;
+            border-top: 0.1px solid rgb(198, 197, 197);
+            border-bottom: 0.1px solid rgb(198, 197, 197);
+        }
+
+        .cou {
+            display: flex;
+            column-gap: 5px;
+            align-items: center;
+            justify-content: space-between;
+            
+            input {
+                border-radius: 5px;
+                width: 60%;
+                padding: 20px;
+            }
+
+            .btn-cou {
+                border-radius: 25px;
+                padding: 10px;
+                color: #FF0000;
+                background-color: #FBF3F3;
+                height: 48px;
+            }
+        }
+
+        .btn-checkout {
+            margin-bottom: 20px;
+            
+            button {
+                width: 100%;
+                height: 56px;
+                border-radius: 100px;
+                font-weight: 400;
+                color: white;
+                background-color: #DC0202;
+                padding-bottom: 10px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        .pay {
+            div {
+                column-gap: 5px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    #ship-checkbox {
+        
+        input[type="checkbox"]:checked ~ .text-check {
+            display: block;
+        }
+    }
+
+    .ship-notes, .ship-hear {
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            row-gap: 5px;
+        }
+    }
+
+    .primary {
+        // position: relative;
+
+        button.button.action.continue.primary {
+            // position: absolute;
+            // right: -427px;
+            // top: -341px;
+            // width: 380px;
+            border-radius: 100px;
+            background-color: #DC0202;
+        }
+    }
+
+    .content.minicart-items {
+        display: block !important;
+    }
+
+    .opc-block-summary {
+        background-color: white;
+        border: 1px solid rgb(185, 185, 185);
+        border-radius: 20px;
+    }
+
+    .opc-block-summary .items-in-cart.active > .title:after {
+        display:  none !important;
+    }
+
+    .content {
+        display: block !important;
+    }
+}
+
+.checkout-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(201, 200, 200);
+    margin-bottom: 20px;    
+
+    .checkout-call {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+            width: 30px;
+        }
+    }
+}
+
+.privacy-policy {
+    padding: 20px;
+    background-color: #1E1A1A;
+    color: white;
+    text-align: center;
+}
+
+.custom-div {
+    position: absolute;
+    right: -95px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    img:hover {
+        scale: 1.1;
+    }
+}
