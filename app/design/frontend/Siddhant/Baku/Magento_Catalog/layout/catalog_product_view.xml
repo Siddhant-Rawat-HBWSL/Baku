@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <head>
+        <script type="text/js" src="Magento_Catalog::js/add-subtract-button.js" />
+    </head>
+
+    <body>
+
+        <move element="page.main.title" destination="product.info.main" before="-" />
+        <move element="product.info.addto" destination="product.info.addtocart.additional" after="-" />
+
+        <referenceContainer name="content">
+            <container htmlTag="div" htmlClass="product-upper">
+                <container name="product.sidebar" htmlTag="div" htmlClass="product-sidebar" before="-">
+    
+                    <block class="Magento\Cms\Block\Block" name="product_img_block" after="product.sidebar">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">product_img_block</argument>
+                        </arguments>
+                    </block>                    
+                </container>
+
+                <container name="product.info.main" htmlTag="div" htmlClass="product-info-main" />
+
+                <container name="product.info.media" htmlTag="div" htmlClass="product media" before="product.info.main" />
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="content.aside">
+            <block class="Magento\Cms\Block\Block" name="pdp_footer_img" after="catalog.product.related">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">pdp_footer_img</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+    </body>
+
+</page>
