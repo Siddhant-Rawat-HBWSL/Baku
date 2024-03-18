@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magento_Theme::css/local.css" />
+    </head>
+
+    <body>
+        <referenceContainer name="after.body.start">
+            <block class="Magento\Cms\Block\Block" name="call-us" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">call-us</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="stores-campaigns" after="call-us">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">stores-campaigns</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer-container">
+            <referenceContainer name="footer" remove="true" />
+            <block class="Magento\Cms\Block\Block" name="cms_footer">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">cms_footer</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
